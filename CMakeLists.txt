@@ -147,12 +147,12 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(road_reconstruction src/road_reconstruction.cpp)
-add_executable(assem src/assemble.cpp)
+## add_executable(assem src/assemble.cpp)
 # add_executable()
 add_dependencies(road_reconstruction ${PROJECT_NAME}_gencfg)
 
 target_link_libraries(road_reconstruction ${catkin_LIBRARIES} ${PCL_LIBRARIES})
-target_link_libraries(assem ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+##target_link_libraries(assem ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 link_directories(${PCL_LIBRARY_DIRS})
 # include_directories(${PCL_INCLUDE_DIRS})
